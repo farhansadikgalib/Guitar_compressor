@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:padding="8dp"
+    android:layout_margin="10dp"
+    android:id="@+id/hacker"
+    android:layout_alignParentRight="true"
+    android:src="@drawable/hacker"
+    />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="wrap_content"
+        app:shimmer_auto_start="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/shimmer_view_container"
+        android:layout_centerInParent="true"
+        app:shimmer_shape="linear"
+        android:layout_marginTop="50dp"
+        app:shimmer_base_color="#94FE31"
+        android:outlineAmbientShadowColor="#94FE31"
+        app:shimmer_colored="true"
+        app:shimmer_highlight_color="@color/text_color"
+        app:shimmer_duration="4000"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:padding="3dp"
+            android:layout_gravity="center"
+            android:text="Guitar Compressor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#ffffff"
+            android:textSize="35dp" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:gravity="center">
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/audio_Play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/play" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:src="@drawable/stop"
+            android:id="@+id/audio_stop"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <it.beppi.knoblibrary.Knob
+        android:layout_marginTop="50dp"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/knob"
+        app:kKnobColor="#080808"
+        app:kKnobCenterColor="#A4A4A4"
+        app:kStateMarkersColor="#FF9100"
+        app:kKnobRelativeRadius=".92"
+        app:kAnimation="@anim/fade_out"
+        app:kIndicatorColor="#94FE31"
+        app:kSelectedStateMarkerColor="#76FF03"
+        app:kAnimationBounciness="@android:integer/config_mediumAnimTime"
+        app:kShowBalloonValues="true"
+        app:kBalloonValuesTimeToLive="10"
+        app:kBalloonValuesTextSize="5dp"
+        app:kBalloonValuesAnimation="pop"
+        app:kNumberOfStates="11"
+        android:layout_marginBottom="80dp"
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="80dp"
+                android:fontFamily="@font/digital_display"
+                android:id="@+id/text_view_threshold"
+                android:textColor="#94FE31"
+
+                />
+            <com.chibde.visualizer.LineBarVisualizer
+                android:id="@+id/lineVisualizer"
+                android:layout_margin="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
