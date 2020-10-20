@@ -120,36 +120,82 @@
         android:elevation="10dp">
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg"
+
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/text_view_threshold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_margin="20dp"
-                android:textStyle="bold"
-                android:textSize="80dp"
+                android:layout_gravity="center"
                 android:fontFamily="@font/digital_display"
-                android:id="@+id/text_view_threshold"
+                android:text="0"
+                android:layout_marginLeft="10dp"
                 android:textColor="#94FE31"
+                android:textSize="75dp"
+                android:textStyle="bold"
 
                 />
-            <com.chibde.visualizer.LineBarVisualizer
-                android:id="@+id/lineVisualizer"
-                android:layout_margin="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_width="100dp"
-                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="60dp"
+                    android:fontFamily="@font/digital_display"
+                    android:textColor="#94FE31"
+
+
+
+                    />
 
 
 
 
+            </LinearLayout>
 
-        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+
+                <com.gauravk.audiovisualizer.visualizer.WaveVisualizer
+                    android:id="@+id/blast"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    app:avColor="#AEEA00"
+                    app:avDensity="0.8"
+                    app:avSpeed="normal"
+                    app:avType="fill" />
+
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>

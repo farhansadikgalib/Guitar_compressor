@@ -1,2 +1,3 @@
+include ':TarsosDSPAndroid-v3'
 include ':app'
 rootProject.name = "Guitar compressor"

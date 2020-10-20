@@ -10,8 +10,13 @@
         android:roundIcon="@drawable/guitar"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".Splash_Screen"
+            android:screenOrientation="portrait"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
