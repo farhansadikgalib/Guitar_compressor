@@ -3,9 +3,9 @@
 
 
 ## Language & Tools
-Java 
-Android Studio
-Min Sdk: android 16
+<p>Java </P>
+<p>Android Studio</p>
+<p>Min Sdk: android 16</p>
 
 
 ## Librarys
